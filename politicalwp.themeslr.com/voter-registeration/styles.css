@@ -1,0 +1,99 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #ECEFF1;
+    color: #000;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+h1,
+p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+form {
+    width: 65vw;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border: none;
+    padding: 1vh 2vh;
+    background-color: #e0e0e0;
+}
+
+fieldset:not(:last-of-type) {
+    border-bottom: 3px solid #3b3b4f;
+}
+
+label {
+    display: inline-block;
+    margin: 2vh 3vh;
+    padding: 1vh;
+}
+
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 35vh;
+    min-height: 2em;
+    display: block;
+    background-color: #CFD8DC;
+    border: 1px solid #0a0a23;
+    color: #000;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    display: block;
+    width: fit-content;
+    margin: 1em auto;
+    height: fit-content;
+    font-size: 1.1rem;
+    background-color: #1f80e0;
+    border-color: white;
+    min-width: 300px;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 0px;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+a {
+    color: #dfdfe2;
+}
+
+.required-field {
+    color: red;
+}
+
+.success {
+    color: white;
+    background-color: #d63302 !important;
+    
+          width: 40vw;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 1em !important;
+          padding-bottom: 1em !important;
+          padding-left: 4em;
+          border-radius: 4px;
+        margin-top: 2em;
+          
+  }

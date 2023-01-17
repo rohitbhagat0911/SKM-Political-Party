@@ -1,0 +1,54 @@
+<?php
+							if($eventDetails != FALSE && $eventDetails->num_rows > 0) {
+								while ($events = $eventDetails->fetch_assoc()) {
+
+						?>
+				<div id="post-5716"
+								class="type-tribe_events post-5716 tribe-clearfix tribe-events-category-voting tribe-events-first">
+								<h2 class="tribe-events-list-event-title"> <?php echo $events['title']; ?> </h2>
+								
+								<div class="tribe-events-event-meta">
+								<?php
+									if (isset($_SESSION['isLoggedIn']) == true && ($_SESSION['userDegree'] == 0 || $_SESSION['userDegree'] == 1 )) {
+										?>
+				<a href="../../event-form?id=<?php echo $events['id']; ?>">Edit News</a> </br>
+				<?php
+					if ($events['id'] != '1' && $events['id'] != '2' && $events['id'] != 3) {
+						
+				?>
+				<a href="../../../server/deletenews.php?id=<?php echo $events['id']; ?>">Delete News</a>
+						<?php
+						}
+						?>
+										<?php
+									}
+								?>
+									<div class="author  location">
+										<div class="tribe-event-schedule-details"></div>
+										<div class="tribe-events-venue-details"> <span class="tribe-address"></span>
+										</div>
+									</div>
+								</div>
+								<div class="tribe-events-event-image"><img width="300" height="200"
+								src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($events['image']); ?>"		
+										class="attachment-medium size-medium wp-post-image" alt="" loading="lazy"
+										sizes="(max-width: 300px) 100vw, 300px" /></div>
+								<div class="tribe-events-list-event-description tribe-events-content">
+									<p><?php echo $events['description']; ?></p>
+								</div>
+							</div>
+						<?php
+								}
+							}
+
+?>
+
+<?php
+							if (isset($_GET['status'])) {
+								?>
+							<script>
+								alert("Deleted Successfully");
+							</script>
+								<?php
+							}
+						?>
